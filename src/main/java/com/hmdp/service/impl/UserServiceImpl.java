@@ -90,6 +90,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         //保存用户信息到session中
         //随机生成token,作为登录令牌
         String token = UUID.randomUUID().toString(true);
+//        System.out.println("token:"+token);
 //        将user对象转为hashmap存储
         UserDTO userDTO = BeanUtil.copyProperties(user,UserDTO.class);
         /**
